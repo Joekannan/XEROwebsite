@@ -1,0 +1,441 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.19/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">XERO Application</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="a3ea84588368282da71c0b4ef14ba5cb15c55fdbde65db43e354a54d58743c03.html">As A Xero User,</a></span>
+                > <span class="truncate-60"><a
+                    href="1380523750bf464ac379f222327deea9bcd92e1747eb7e04dcaa7db0b7eba53f.html">Adding ANZ (NZ) bank account to Demo Company </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="fa fa-comments-o"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 28-10-2020 18:24</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">As A Xero User, </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                In order to manage my business successfully,<br />
+I want to be able to add an &quot;ANZ (NZ)&quot; bank account inside any Xero Organisation.
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Adding ANZ (NZ) bank account to Demo Company
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given Xero user on Dashboard<br>When Xero user adds "&lt;Bank&gt;" Bank Account from "&lt;From&gt;" for "&lt;AccountType&gt;"<br>Then the added account should be available at Bank Accounts</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="3ff273fd305fc469b17ba05a3ad9afa892fac60e67c4395522fd897dad2a3255.png" title=" Example: {Bank=ANZ (NZ), From=Dashboard  &gt; Manage Bank Account, AccountType=Everyday (day-to-day)}" width="1920"/>
+                <img src="3ff273fd305fc469b17ba05a3ad9afa892fac60e67c4395522fd897dad2a3255.png" title=" Given Xero Account details to login &quot;jothi2k9@gmail.com&quot; and &quot;Test1234&quot;" width="1920"/>
+                <img src="3ff273fd305fc469b17ba05a3ad9afa892fac60e67c4395522fd897dad2a3255.png" title=" Login: jothi2k9@gmail.com, Test1234" width="1920"/>
+                <img src="3ff273fd305fc469b17ba05a3ad9afa892fac60e67c4395522fd897dad2a3255.png" title=" Given Xero Account details to login &quot;jothi2k9@gmail.com&quot; and &quot;Test1234&quot; (completed)" width="1920"/>
+                <img src="3ff273fd305fc469b17ba05a3ad9afa892fac60e67c4395522fd897dad2a3255.png" title=" Given Xero user on Dashboard" width="1920"/>
+                <img src="3ff273fd305fc469b17ba05a3ad9afa892fac60e67c4395522fd897dad2a3255.png" title=" Verify login" width="1920"/>
+                <img src="b47164885e019650870e6ff15653654c46cf5064b2f324c39efad97c5d679bd2.png" title=" Verify login (completed)" width="1920"/>
+                <img src="b47164885e019650870e6ff15653654c46cf5064b2f324c39efad97c5d679bd2.png" title=" Given Xero user on Dashboard (completed)" width="1920"/>
+                <img src="b47164885e019650870e6ff15653654c46cf5064b2f324c39efad97c5d679bd2.png" title=" When Xero user adds &quot;ANZ (NZ)&quot; Bank Account from &quot;Dashboard  &gt; Manage Bank Account&quot; for &quot;Everyday (day-to-day)&quot;" width="1920"/>
+                <img src="b47164885e019650870e6ff15653654c46cf5064b2f324c39efad97c5d679bd2.png" title=" Traverse from: Dashboard  &gt; Manage Bank Account" width="1920"/>
+                <img src="b60e54439a929fa6138c58757873c4b8c8e3f17f6fab89e6c20b1fc36fad93d0.png" title=" Traverse from: Dashboard  &gt; Manage Bank Account (completed)" width="1920"/>
+                <img src="b60e54439a929fa6138c58757873c4b8c8e3f17f6fab89e6c20b1fc36fad93d0.png" title=" Add account: ANZ (NZ), Everyday (day-to-day)" width="1920"/>
+                <img src="bff3a35fbb62780347beec49ef3a5e29494dc0fb8351ba8d2cf03e54ecb96366.png" title=" Add account: ANZ (NZ), Everyday (day-to-day) (completed)" width="1920"/>
+                <img src="bff3a35fbb62780347beec49ef3a5e29494dc0fb8351ba8d2cf03e54ecb96366.png" title=" When Xero user adds &quot;ANZ (NZ)&quot; Bank Account from &quot;Dashboard  &gt; Manage Bank Account&quot; for &quot;Everyday (day-to-day)&quot; (completed)" width="1920"/>
+                <img src="bff3a35fbb62780347beec49ef3a5e29494dc0fb8351ba8d2cf03e54ecb96366.png" title=" Then the added account should be available at Bank Accounts" width="1920"/>
+                <img src="bff3a35fbb62780347beec49ef3a5e29494dc0fb8351ba8d2cf03e54ecb96366.png" title=" Verify added bank" width="1920"/>
+                <img src="9a41b26ce9dddff7b3e013e4c9e0a04d553bce5bc627491b86127ac2d1e22e24.png" title=" Verify added bank (completed)" width="1920"/>
+                <img src="9a41b26ce9dddff7b3e013e4c9e0a04d553bce5bc627491b86127ac2d1e22e24.png" title=" Then the added account should be available at Bank Accounts (completed)" width="1920"/>
+                <img src="9a41b26ce9dddff7b3e013e4c9e0a04d553bce5bc627491b86127ac2d1e22e24.png" title=" Example: {Bank=ANZ (NZ), From=Dashboard  &gt; Manage Bank Account, AccountType=Everyday (day-to-day)} (completed)" width="1920"/>
+                <img src="8289a4b4af4edf18e7c700f369f571048361eb2971ac8a68a71728dc66d064fd.png" title=" Example: {Bank=ANZ (NZ), From=Accounting &gt; Bank Accounts, AccountType=Everyday (day-to-day)}" width="1920"/>
+                <img src="8289a4b4af4edf18e7c700f369f571048361eb2971ac8a68a71728dc66d064fd.png" title=" Given Xero Account details to login &quot;jothi2k9@gmail.com&quot; and &quot;Test1234&quot;" width="1920"/>
+                <img src="8289a4b4af4edf18e7c700f369f571048361eb2971ac8a68a71728dc66d064fd.png" title=" Login: jothi2k9@gmail.com, Test1234" width="1920"/>
+                <img src="8289a4b4af4edf18e7c700f369f571048361eb2971ac8a68a71728dc66d064fd.png" title=" Given Xero Account details to login &quot;jothi2k9@gmail.com&quot; and &quot;Test1234&quot; (completed)" width="1920"/>
+                <img src="8289a4b4af4edf18e7c700f369f571048361eb2971ac8a68a71728dc66d064fd.png" title=" Given Xero user on Dashboard" width="1920"/>
+                <img src="8289a4b4af4edf18e7c700f369f571048361eb2971ac8a68a71728dc66d064fd.png" title=" Verify login" width="1920"/>
+                <img src="8289a4b4af4edf18e7c700f369f571048361eb2971ac8a68a71728dc66d064fd.png" title=" Verify login (completed)" width="1920"/>
+                <img src="8289a4b4af4edf18e7c700f369f571048361eb2971ac8a68a71728dc66d064fd.png" title=" Given Xero user on Dashboard (completed)" width="1920"/>
+                <img src="8289a4b4af4edf18e7c700f369f571048361eb2971ac8a68a71728dc66d064fd.png" title=" When Xero user adds &quot;ANZ (NZ)&quot; Bank Account from &quot;Accounting &gt; Bank Accounts&quot; for &quot;Everyday (day-to-day)&quot;" width="1920"/>
+                <img src="8289a4b4af4edf18e7c700f369f571048361eb2971ac8a68a71728dc66d064fd.png" title=" Traverse from: Accounting &gt; Bank Accounts" width="1920"/>
+                <img src="3fb2f69e4d08344339fa68f1154d382077744ddfe75ea2599c0928ed65eb6bb3.png" title=" Traverse from: Accounting &gt; Bank Accounts (completed)" width="1920"/>
+                <img src="3fb2f69e4d08344339fa68f1154d382077744ddfe75ea2599c0928ed65eb6bb3.png" title=" Add account: ANZ (NZ), Everyday (day-to-day)" width="1920"/>
+                <img src="07695b1dc3246396b911e348d1f408864434446aa5758ffa8e86a7a41440ed75.png" title=" Add account: ANZ (NZ), Everyday (day-to-day) (completed)" width="1920"/>
+                <img src="07695b1dc3246396b911e348d1f408864434446aa5758ffa8e86a7a41440ed75.png" title=" When Xero user adds &quot;ANZ (NZ)&quot; Bank Account from &quot;Accounting &gt; Bank Accounts&quot; for &quot;Everyday (day-to-day)&quot; (completed)" width="1920"/>
+                <img src="07695b1dc3246396b911e348d1f408864434446aa5758ffa8e86a7a41440ed75.png" title=" Then the added account should be available at Bank Accounts" width="1920"/>
+                <img src="07695b1dc3246396b911e348d1f408864434446aa5758ffa8e86a7a41440ed75.png" title=" Verify added bank" width="1920"/>
+                <img src="4227253a192a3920c7b136520ae9cea680ea3590b71b2466a726fee4ead35ef8.png" title=" Verify added bank (completed)" width="1920"/>
+                <img src="4227253a192a3920c7b136520ae9cea680ea3590b71b2466a726fee4ead35ef8.png" title=" Then the added account should be available at Bank Accounts (completed)" width="1920"/>
+                <img src="4227253a192a3920c7b136520ae9cea680ea3590b71b2466a726fee4ead35ef8.png" title=" Example: {Bank=ANZ (NZ), From=Accounting &gt; Bank Accounts, AccountType=Everyday (day-to-day)} (completed)" width="1920"/>
+                <img src="f8e9e8294f14d8293bf70d11b434e6604b06950fdcaafba80a34160b426fd685.png" title=" Example: {Bank=ANZ (NZ), From=Accounting &gt; Bank Accounts, AccountType=Loan}" width="1920"/>
+                <img src="f8e9e8294f14d8293bf70d11b434e6604b06950fdcaafba80a34160b426fd685.png" title=" Given Xero Account details to login &quot;jothi2k9@gmail.com&quot; and &quot;Test1234&quot;" width="1920"/>
+                <img src="f8e9e8294f14d8293bf70d11b434e6604b06950fdcaafba80a34160b426fd685.png" title=" Login: jothi2k9@gmail.com, Test1234" width="1920"/>
+                <img src="f8e9e8294f14d8293bf70d11b434e6604b06950fdcaafba80a34160b426fd685.png" title=" Given Xero Account details to login &quot;jothi2k9@gmail.com&quot; and &quot;Test1234&quot; (completed)" width="1920"/>
+                <img src="f8e9e8294f14d8293bf70d11b434e6604b06950fdcaafba80a34160b426fd685.png" title=" Given Xero user on Dashboard" width="1920"/>
+                <img src="f8e9e8294f14d8293bf70d11b434e6604b06950fdcaafba80a34160b426fd685.png" title=" Verify login" width="1920"/>
+                <img src="f8e9e8294f14d8293bf70d11b434e6604b06950fdcaafba80a34160b426fd685.png" title=" Verify login (completed)" width="1920"/>
+                <img src="f8e9e8294f14d8293bf70d11b434e6604b06950fdcaafba80a34160b426fd685.png" title=" Given Xero user on Dashboard (completed)" width="1920"/>
+                <img src="2f2f87b1b48633813e951ed1ef1fc05acdb9578462ed765d0e84aa636b15cf5f.png" title=" When Xero user adds &quot;ANZ (NZ)&quot; Bank Account from &quot;Accounting &gt; Bank Accounts&quot; for &quot;Loan&quot;" width="1920"/>
+                <img src="2f2f87b1b48633813e951ed1ef1fc05acdb9578462ed765d0e84aa636b15cf5f.png" title=" Traverse from: Accounting &gt; Bank Accounts" width="1920"/>
+                <img src="f8680c12e3ff9cc2159f91ea6c9350588f140e3da46ad1c9a7f4480c645d6cde.png" title=" Traverse from: Accounting &gt; Bank Accounts (completed)" width="1920"/>
+                <img src="f8680c12e3ff9cc2159f91ea6c9350588f140e3da46ad1c9a7f4480c645d6cde.png" title=" Add account: ANZ (NZ), Loan" width="1920"/>
+                <img src="984a1de752d7b0b75b0b54f537edbaa1cbdf7563342fbbe19ac762dc391db627.png" title=" Add account: ANZ (NZ), Loan (completed)" width="1920"/>
+                <img src="984a1de752d7b0b75b0b54f537edbaa1cbdf7563342fbbe19ac762dc391db627.png" title=" When Xero user adds &quot;ANZ (NZ)&quot; Bank Account from &quot;Accounting &gt; Bank Accounts&quot; for &quot;Loan&quot; (completed)" width="1920"/>
+                <img src="984a1de752d7b0b75b0b54f537edbaa1cbdf7563342fbbe19ac762dc391db627.png" title=" Then the added account should be available at Bank Accounts" width="1920"/>
+                <img src="984a1de752d7b0b75b0b54f537edbaa1cbdf7563342fbbe19ac762dc391db627.png" title=" Verify added bank" width="1920"/>
+                <img src="c7ce9619e312d43292286b2585b6788494971d609992e4e3db4d4b69fb5df920.png" title=" Verify added bank (completed)" width="1920"/>
+                <img src="c7ce9619e312d43292286b2585b6788494971d609992e4e3db4d4b69fb5df920.png" title=" Then the added account should be available at Bank Accounts (completed)" width="1920"/>
+                <img src="c7ce9619e312d43292286b2585b6788494971d609992e4e3db4d4b69fb5df920.png" title=" Example: {Bank=ANZ (NZ), From=Accounting &gt; Bank Accounts, AccountType=Loan} (completed)" width="1920"/>
+                <img src="ab4be95db8b9896cb5c8677814d66e5d03bc50baa41c1ca8d4d3dea80a2ffd16.png" title=" Example: {Bank=ANZ (NZ), From=Accounting &gt; Bank Accounts, AccountType=Term Deposit}" width="1920"/>
+                <img src="ab4be95db8b9896cb5c8677814d66e5d03bc50baa41c1ca8d4d3dea80a2ffd16.png" title=" Given Xero Account details to login &quot;jothi2k9@gmail.com&quot; and &quot;Test1234&quot;" width="1920"/>
+                <img src="ab4be95db8b9896cb5c8677814d66e5d03bc50baa41c1ca8d4d3dea80a2ffd16.png" title=" Login: jothi2k9@gmail.com, Test1234" width="1920"/>
+                <img src="ab4be95db8b9896cb5c8677814d66e5d03bc50baa41c1ca8d4d3dea80a2ffd16.png" title=" Given Xero Account details to login &quot;jothi2k9@gmail.com&quot; and &quot;Test1234&quot; (completed)" width="1920"/>
+                <img src="ab4be95db8b9896cb5c8677814d66e5d03bc50baa41c1ca8d4d3dea80a2ffd16.png" title=" Given Xero user on Dashboard" width="1920"/>
+                <img src="ab4be95db8b9896cb5c8677814d66e5d03bc50baa41c1ca8d4d3dea80a2ffd16.png" title=" Verify login" width="1920"/>
+                <img src="ab4be95db8b9896cb5c8677814d66e5d03bc50baa41c1ca8d4d3dea80a2ffd16.png" title=" Verify login (completed)" width="1920"/>
+                <img src="ab4be95db8b9896cb5c8677814d66e5d03bc50baa41c1ca8d4d3dea80a2ffd16.png" title=" Given Xero user on Dashboard (completed)" width="1920"/>
+                <img src="ab4be95db8b9896cb5c8677814d66e5d03bc50baa41c1ca8d4d3dea80a2ffd16.png" title=" When Xero user adds &quot;ANZ (NZ)&quot; Bank Account from &quot;Accounting &gt; Bank Accounts&quot; for &quot;Term Deposit&quot;" width="1920"/>
+                <img src="ab4be95db8b9896cb5c8677814d66e5d03bc50baa41c1ca8d4d3dea80a2ffd16.png" title=" Traverse from: Accounting &gt; Bank Accounts" width="1920"/>
+                <img src="3c8ac6130a61622f89f760b3a06b33a60a80daef31fedd7ef7b799ee04910644.png" title=" Traverse from: Accounting &gt; Bank Accounts (completed)" width="1920"/>
+                <img src="3c8ac6130a61622f89f760b3a06b33a60a80daef31fedd7ef7b799ee04910644.png" title=" Add account: ANZ (NZ), Term Deposit" width="1920"/>
+                <img src="91a33f764bbae099edf83f6578e777358f571777fb7f8f810ac9d707e3f2e2e2.png" title=" Add account: ANZ (NZ), Term Deposit (completed)" width="1920"/>
+                <img src="91a33f764bbae099edf83f6578e777358f571777fb7f8f810ac9d707e3f2e2e2.png" title=" When Xero user adds &quot;ANZ (NZ)&quot; Bank Account from &quot;Accounting &gt; Bank Accounts&quot; for &quot;Term Deposit&quot; (completed)" width="1920"/>
+                <img src="91a33f764bbae099edf83f6578e777358f571777fb7f8f810ac9d707e3f2e2e2.png" title=" Then the added account should be available at Bank Accounts" width="1920"/>
+                <img src="91a33f764bbae099edf83f6578e777358f571777fb7f8f810ac9d707e3f2e2e2.png" title=" Verify added bank" width="1920"/>
+                <img src="e89d22895f3be2d901260a3e1c7e96b9d477f8fd11e75898577c191a300712c3.png" title=" Verify added bank (completed)" width="1920"/>
+                <img src="e89d22895f3be2d901260a3e1c7e96b9d477f8fd11e75898577c191a300712c3.png" title=" Then the added account should be available at Bank Accounts (completed)" width="1920"/>
+                <img src="e89d22895f3be2d901260a3e1c7e96b9d477f8fd11e75898577c191a300712c3.png" title=" Example: {Bank=ANZ (NZ), From=Accounting &gt; Bank Accounts, AccountType=Term Deposit} (completed)" width="1920"/>
+                <img src="b6e01c2f9efbb4fa7671f39446682da918f33822beff8225e228d00bb159efd5.png" title=" Example: {Bank=ANZ (NZ), From=Accounting &gt; Bank Accounts, AccountType=Credit Card}" width="1920"/>
+                <img src="b6e01c2f9efbb4fa7671f39446682da918f33822beff8225e228d00bb159efd5.png" title=" Given Xero Account details to login &quot;jothi2k9@gmail.com&quot; and &quot;Test1234&quot;" width="1920"/>
+                <img src="b6e01c2f9efbb4fa7671f39446682da918f33822beff8225e228d00bb159efd5.png" title=" Login: jothi2k9@gmail.com, Test1234" width="1920"/>
+                <img src="b6e01c2f9efbb4fa7671f39446682da918f33822beff8225e228d00bb159efd5.png" title=" Given Xero Account details to login &quot;jothi2k9@gmail.com&quot; and &quot;Test1234&quot; (completed)" width="1920"/>
+                <img src="b6e01c2f9efbb4fa7671f39446682da918f33822beff8225e228d00bb159efd5.png" title=" Given Xero user on Dashboard" width="1920"/>
+                <img src="b6e01c2f9efbb4fa7671f39446682da918f33822beff8225e228d00bb159efd5.png" title=" Verify login" width="1920"/>
+                <img src="b6e01c2f9efbb4fa7671f39446682da918f33822beff8225e228d00bb159efd5.png" title=" Verify login (completed)" width="1920"/>
+                <img src="b6e01c2f9efbb4fa7671f39446682da918f33822beff8225e228d00bb159efd5.png" title=" Given Xero user on Dashboard (completed)" width="1920"/>
+                <img src="f64b181a5ac066cdfd18dc49484310a615e091258f089abaaba32aa462c28541.png" title=" When Xero user adds &quot;ANZ (NZ)&quot; Bank Account from &quot;Accounting &gt; Bank Accounts&quot; for &quot;Credit Card&quot;" width="1920"/>
+                <img src="f64b181a5ac066cdfd18dc49484310a615e091258f089abaaba32aa462c28541.png" title=" Traverse from: Accounting &gt; Bank Accounts" width="1920"/>
+                <img src="6de30a2153f2877bc97af915d0b3cf86ed9872050d5c5c34082b75bf5483fc3e.png" title=" Traverse from: Accounting &gt; Bank Accounts (completed)" width="1920"/>
+                <img src="6de30a2153f2877bc97af915d0b3cf86ed9872050d5c5c34082b75bf5483fc3e.png" title=" Add account: ANZ (NZ), Credit Card" width="1920"/>
+                <img src="857053717eb387da5abf43fca02c62b315873dd6fb7f1b2f8288c9f37d7272de.png" title=" Add account: ANZ (NZ), Credit Card (completed)" width="1920"/>
+                <img src="857053717eb387da5abf43fca02c62b315873dd6fb7f1b2f8288c9f37d7272de.png" title=" When Xero user adds &quot;ANZ (NZ)&quot; Bank Account from &quot;Accounting &gt; Bank Accounts&quot; for &quot;Credit Card&quot; (completed)" width="1920"/>
+                <img src="857053717eb387da5abf43fca02c62b315873dd6fb7f1b2f8288c9f37d7272de.png" title=" Then the added account should be available at Bank Accounts" width="1920"/>
+                <img src="857053717eb387da5abf43fca02c62b315873dd6fb7f1b2f8288c9f37d7272de.png" title=" Verify added bank" width="1920"/>
+                <img src="60c8e1465b8c64817487822342fc6dce0216ba5b94c04a19cabe38fb79fee845.png" title=" Verify added bank (completed)" width="1920"/>
+                <img src="60c8e1465b8c64817487822342fc6dce0216ba5b94c04a19cabe38fb79fee845.png" title=" Then the added account should be available at Bank Accounts (completed)" width="1920"/>
+                <img src="60c8e1465b8c64817487822342fc6dce0216ba5b94c04a19cabe38fb79fee845.png" title=" Example: {Bank=ANZ (NZ), From=Accounting &gt; Bank Accounts, AccountType=Credit Card} (completed)" width="1920"/>
+                <img src="831c6287337f8ac29aafa3753b63c704ccd3df89c7a48cf6afd67d53fdd7b1df.png" title=" Example: {Bank=ANZ (NZ), From=Accounting &gt; Bank Accounts, AccountType=Other}" width="1920"/>
+                <img src="831c6287337f8ac29aafa3753b63c704ccd3df89c7a48cf6afd67d53fdd7b1df.png" title=" Given Xero Account details to login &quot;jothi2k9@gmail.com&quot; and &quot;Test1234&quot;" width="1920"/>
+                <img src="831c6287337f8ac29aafa3753b63c704ccd3df89c7a48cf6afd67d53fdd7b1df.png" title=" Login: jothi2k9@gmail.com, Test1234" width="1920"/>
+                <img src="831c6287337f8ac29aafa3753b63c704ccd3df89c7a48cf6afd67d53fdd7b1df.png" title=" Given Xero Account details to login &quot;jothi2k9@gmail.com&quot; and &quot;Test1234&quot; (completed)" width="1920"/>
+                <img src="831c6287337f8ac29aafa3753b63c704ccd3df89c7a48cf6afd67d53fdd7b1df.png" title=" Given Xero user on Dashboard" width="1920"/>
+                <img src="831c6287337f8ac29aafa3753b63c704ccd3df89c7a48cf6afd67d53fdd7b1df.png" title=" Verify login" width="1920"/>
+                <img src="831c6287337f8ac29aafa3753b63c704ccd3df89c7a48cf6afd67d53fdd7b1df.png" title=" Verify login (completed)" width="1920"/>
+                <img src="831c6287337f8ac29aafa3753b63c704ccd3df89c7a48cf6afd67d53fdd7b1df.png" title=" Given Xero user on Dashboard (completed)" width="1920"/>
+                <img src="831c6287337f8ac29aafa3753b63c704ccd3df89c7a48cf6afd67d53fdd7b1df.png" title=" When Xero user adds &quot;ANZ (NZ)&quot; Bank Account from &quot;Accounting &gt; Bank Accounts&quot; for &quot;Other&quot;" width="1920"/>
+                <img src="831c6287337f8ac29aafa3753b63c704ccd3df89c7a48cf6afd67d53fdd7b1df.png" title=" Traverse from: Accounting &gt; Bank Accounts" width="1920"/>
+                <img src="8d40935bce32852f6bc048a558d0331ca423c0594060d9ff4688f499e59ac2db.png" title=" Traverse from: Accounting &gt; Bank Accounts (completed)" width="1920"/>
+                <img src="8d40935bce32852f6bc048a558d0331ca423c0594060d9ff4688f499e59ac2db.png" title=" Add account: ANZ (NZ), Other" width="1920"/>
+                <img src="db58435aa89f6c4ab4986613da37b5c1601300f1e1277c037dc0470ef6adc73d.png" title=" Add account: ANZ (NZ), Other (completed)" width="1920"/>
+                <img src="db58435aa89f6c4ab4986613da37b5c1601300f1e1277c037dc0470ef6adc73d.png" title=" When Xero user adds &quot;ANZ (NZ)&quot; Bank Account from &quot;Accounting &gt; Bank Accounts&quot; for &quot;Other&quot; (completed)" width="1920"/>
+                <img src="db58435aa89f6c4ab4986613da37b5c1601300f1e1277c037dc0470ef6adc73d.png" title=" Then the added account should be available at Bank Accounts" width="1920"/>
+                <img src="db58435aa89f6c4ab4986613da37b5c1601300f1e1277c037dc0470ef6adc73d.png" title=" Verify added bank" width="1920"/>
+                <img src="4e842c28daed5912e68bd46651d23c6c53fccff0d626c536789f5b2d4bc1aa2a.png" title=" Verify added bank (completed)" width="1920"/>
+                <img src="4e842c28daed5912e68bd46651d23c6c53fccff0d626c536789f5b2d4bc1aa2a.png" title=" Then the added account should be available at Bank Accounts (completed)" width="1920"/>
+                <img src="4e842c28daed5912e68bd46651d23c6c53fccff0d626c536789f5b2d4bc1aa2a.png" title=" Example: {Bank=ANZ (NZ), From=Accounting &gt; Bank Accounts, AccountType=Other} (completed)" width="1920"/>
+                <img src="bbeeaff1d1c81d22373abef43ad8feaa75e075b03c3516473677a17926c4acbc.png" title=" Example: {Bank=ANZ (NZ), From=Accounting &gt; Chart of accounts, AccountType=Everyday (day-to-day)}" width="1920"/>
+                <img src="bbeeaff1d1c81d22373abef43ad8feaa75e075b03c3516473677a17926c4acbc.png" title=" Given Xero Account details to login &quot;jothi2k9@gmail.com&quot; and &quot;Test1234&quot;" width="1920"/>
+                <img src="bbeeaff1d1c81d22373abef43ad8feaa75e075b03c3516473677a17926c4acbc.png" title=" Login: jothi2k9@gmail.com, Test1234" width="1920"/>
+                <img src="bbeeaff1d1c81d22373abef43ad8feaa75e075b03c3516473677a17926c4acbc.png" title=" Given Xero Account details to login &quot;jothi2k9@gmail.com&quot; and &quot;Test1234&quot; (completed)" width="1920"/>
+                <img src="bbeeaff1d1c81d22373abef43ad8feaa75e075b03c3516473677a17926c4acbc.png" title=" Given Xero user on Dashboard" width="1920"/>
+                <img src="bbeeaff1d1c81d22373abef43ad8feaa75e075b03c3516473677a17926c4acbc.png" title=" Verify login" width="1920"/>
+                <img src="bbeeaff1d1c81d22373abef43ad8feaa75e075b03c3516473677a17926c4acbc.png" title=" Verify login (completed)" width="1920"/>
+                <img src="bbeeaff1d1c81d22373abef43ad8feaa75e075b03c3516473677a17926c4acbc.png" title=" Given Xero user on Dashboard (completed)" width="1920"/>
+                <img src="bbeeaff1d1c81d22373abef43ad8feaa75e075b03c3516473677a17926c4acbc.png" title=" When Xero user adds &quot;ANZ (NZ)&quot; Bank Account from &quot;Accounting &gt; Chart of accounts&quot; for &quot;Everyday (day-to-day)&quot;" width="1920"/>
+                <img src="bbeeaff1d1c81d22373abef43ad8feaa75e075b03c3516473677a17926c4acbc.png" title=" Traverse from: Accounting &gt; Chart of accounts" width="1920"/>
+                <img src="7640752b4c5c181571c1f4a9363f66680d192ddcac5761acf7308fb2ab28c9aa.png" title=" Traverse from: Accounting &gt; Chart of accounts (completed)" width="1920"/>
+                <img src="7640752b4c5c181571c1f4a9363f66680d192ddcac5761acf7308fb2ab28c9aa.png" title=" Add account: ANZ (NZ), Everyday (day-to-day)" width="1920"/>
+                <img src="735fd9ccb829360f6479af67a5aa5cf7e3ad1c21785aba73e353d544546d8cbb.png" title=" Add account: ANZ (NZ), Everyday (day-to-day) (completed)" width="1920"/>
+                <img src="735fd9ccb829360f6479af67a5aa5cf7e3ad1c21785aba73e353d544546d8cbb.png" title=" When Xero user adds &quot;ANZ (NZ)&quot; Bank Account from &quot;Accounting &gt; Chart of accounts&quot; for &quot;Everyday (day-to-day)&quot; (completed)" width="1920"/>
+                <img src="735fd9ccb829360f6479af67a5aa5cf7e3ad1c21785aba73e353d544546d8cbb.png" title=" Then the added account should be available at Bank Accounts" width="1920"/>
+                <img src="735fd9ccb829360f6479af67a5aa5cf7e3ad1c21785aba73e353d544546d8cbb.png" title=" Verify added bank" width="1920"/>
+                <img src="14385ed798a1dd1d07552ad78a68bef93a3a1d50c92f6b0c98f9a09d3e9a4471.png" title=" Verify added bank (completed)" width="1920"/>
+                <img src="14385ed798a1dd1d07552ad78a68bef93a3a1d50c92f6b0c98f9a09d3e9a4471.png" title=" Then the added account should be available at Bank Accounts (completed)" width="1920"/>
+                <img src="14385ed798a1dd1d07552ad78a68bef93a3a1d50c92f6b0c98f9a09d3e9a4471.png" title=" Example: {Bank=ANZ (NZ), From=Accounting &gt; Chart of accounts, AccountType=Everyday (day-to-day)} (completed)" width="1920"/>
+                <img src="13c84eb8de0a39fffd430f411c9bb451382edf25cca955313126a1553dbede67.png" title=" Example: {Bank=ANZ (NZ), From=Accounting &gt; Chart of accounts, AccountType=Loan}" width="1920"/>
+                <img src="13c84eb8de0a39fffd430f411c9bb451382edf25cca955313126a1553dbede67.png" title=" Given Xero Account details to login &quot;jothi2k9@gmail.com&quot; and &quot;Test1234&quot;" width="1920"/>
+                <img src="13c84eb8de0a39fffd430f411c9bb451382edf25cca955313126a1553dbede67.png" title=" Login: jothi2k9@gmail.com, Test1234" width="1920"/>
+                <img src="13c84eb8de0a39fffd430f411c9bb451382edf25cca955313126a1553dbede67.png" title=" Given Xero Account details to login &quot;jothi2k9@gmail.com&quot; and &quot;Test1234&quot; (completed)" width="1920"/>
+                <img src="13c84eb8de0a39fffd430f411c9bb451382edf25cca955313126a1553dbede67.png" title=" Given Xero user on Dashboard" width="1920"/>
+                <img src="13c84eb8de0a39fffd430f411c9bb451382edf25cca955313126a1553dbede67.png" title=" Verify login" width="1920"/>
+                <img src="13c84eb8de0a39fffd430f411c9bb451382edf25cca955313126a1553dbede67.png" title=" Verify login (completed)" width="1920"/>
+                <img src="13c84eb8de0a39fffd430f411c9bb451382edf25cca955313126a1553dbede67.png" title=" Given Xero user on Dashboard (completed)" width="1920"/>
+                <img src="13c84eb8de0a39fffd430f411c9bb451382edf25cca955313126a1553dbede67.png" title=" When Xero user adds &quot;ANZ (NZ)&quot; Bank Account from &quot;Accounting &gt; Chart of accounts&quot; for &quot;Loan&quot;" width="1920"/>
+                <img src="13c84eb8de0a39fffd430f411c9bb451382edf25cca955313126a1553dbede67.png" title=" Traverse from: Accounting &gt; Chart of accounts" width="1920"/>
+                <img src="9a9e73d1755e644730e61805bfc0e4667ae7e7ee14090d0eac74718c3ddddcc3.png" title=" Traverse from: Accounting &gt; Chart of accounts (completed)" width="1920"/>
+                <img src="9a9e73d1755e644730e61805bfc0e4667ae7e7ee14090d0eac74718c3ddddcc3.png" title=" Add account: ANZ (NZ), Loan" width="1920"/>
+                <img src="c613879db1d6a5fe95dc014623f20a7599dce86dbf26453b8b0c67c4cfb432d4.png" title=" Add account: ANZ (NZ), Loan (completed)" width="1920"/>
+                <img src="c613879db1d6a5fe95dc014623f20a7599dce86dbf26453b8b0c67c4cfb432d4.png" title=" When Xero user adds &quot;ANZ (NZ)&quot; Bank Account from &quot;Accounting &gt; Chart of accounts&quot; for &quot;Loan&quot; (completed)" width="1920"/>
+                <img src="c613879db1d6a5fe95dc014623f20a7599dce86dbf26453b8b0c67c4cfb432d4.png" title=" Then the added account should be available at Bank Accounts" width="1920"/>
+                <img src="c613879db1d6a5fe95dc014623f20a7599dce86dbf26453b8b0c67c4cfb432d4.png" title=" Verify added bank" width="1920"/>
+                <img src="6029bae3b3d61b3c1832fce2afa3b8a5e64e5fe6bbdec482b69e7483e04c36bb.png" title=" Verify added bank (completed)" width="1920"/>
+                <img src="6029bae3b3d61b3c1832fce2afa3b8a5e64e5fe6bbdec482b69e7483e04c36bb.png" title=" Then the added account should be available at Bank Accounts (completed)" width="1920"/>
+                <img src="6029bae3b3d61b3c1832fce2afa3b8a5e64e5fe6bbdec482b69e7483e04c36bb.png" title=" Example: {Bank=ANZ (NZ), From=Accounting &gt; Chart of accounts, AccountType=Loan} (completed)" width="1920"/>
+                <img src="449063408a1cf60a16e3b8aa2414c25e9cc76d333d28b567d9b7f584ed5fa0a0.png" title=" Example: {Bank=ANZ (NZ), From=Accounting &gt; Chart of accounts, AccountType=Term Deposit}" width="1920"/>
+                <img src="449063408a1cf60a16e3b8aa2414c25e9cc76d333d28b567d9b7f584ed5fa0a0.png" title=" Given Xero Account details to login &quot;jothi2k9@gmail.com&quot; and &quot;Test1234&quot;" width="1920"/>
+                <img src="449063408a1cf60a16e3b8aa2414c25e9cc76d333d28b567d9b7f584ed5fa0a0.png" title=" Login: jothi2k9@gmail.com, Test1234" width="1920"/>
+                <img src="449063408a1cf60a16e3b8aa2414c25e9cc76d333d28b567d9b7f584ed5fa0a0.png" title=" Given Xero Account details to login &quot;jothi2k9@gmail.com&quot; and &quot;Test1234&quot; (completed)" width="1920"/>
+                <img src="449063408a1cf60a16e3b8aa2414c25e9cc76d333d28b567d9b7f584ed5fa0a0.png" title=" Given Xero user on Dashboard" width="1920"/>
+                <img src="449063408a1cf60a16e3b8aa2414c25e9cc76d333d28b567d9b7f584ed5fa0a0.png" title=" Verify login" width="1920"/>
+                <img src="b3a11481f45f834216c2de441eec3dc2221036d7458707c1edae0b2961e88ed0.png" title=" Verify login (completed)" width="1920"/>
+                <img src="b3a11481f45f834216c2de441eec3dc2221036d7458707c1edae0b2961e88ed0.png" title=" Given Xero user on Dashboard (completed)" width="1920"/>
+                <img src="b3a11481f45f834216c2de441eec3dc2221036d7458707c1edae0b2961e88ed0.png" title=" When Xero user adds &quot;ANZ (NZ)&quot; Bank Account from &quot;Accounting &gt; Chart of accounts&quot; for &quot;Term Deposit&quot;" width="1920"/>
+                <img src="b3a11481f45f834216c2de441eec3dc2221036d7458707c1edae0b2961e88ed0.png" title=" Traverse from: Accounting &gt; Chart of accounts" width="1920"/>
+                <img src="e138e75bd34e3bfe21a68481d65c53f4a6b5220df3b1acfe5fad1597a89507e7.png" title=" Traverse from: Accounting &gt; Chart of accounts (completed)" width="1920"/>
+                <img src="e138e75bd34e3bfe21a68481d65c53f4a6b5220df3b1acfe5fad1597a89507e7.png" title=" Add account: ANZ (NZ), Term Deposit" width="1920"/>
+                <img src="805a325b01c84d6e58e2abed51b312c5625f35bd50bb4f7594d0194b7605a92a.png" title=" Add account: ANZ (NZ), Term Deposit (completed)" width="1920"/>
+                <img src="805a325b01c84d6e58e2abed51b312c5625f35bd50bb4f7594d0194b7605a92a.png" title=" When Xero user adds &quot;ANZ (NZ)&quot; Bank Account from &quot;Accounting &gt; Chart of accounts&quot; for &quot;Term Deposit&quot; (completed)" width="1920"/>
+                <img src="805a325b01c84d6e58e2abed51b312c5625f35bd50bb4f7594d0194b7605a92a.png" title=" Then the added account should be available at Bank Accounts" width="1920"/>
+                <img src="805a325b01c84d6e58e2abed51b312c5625f35bd50bb4f7594d0194b7605a92a.png" title=" Verify added bank" width="1920"/>
+                <img src="ec0f1da04cb921ddd1dae29fd2b53cb7c9d8a62b32032a4347e92e8bc0b232cd.png" title=" Verify added bank (completed)" width="1920"/>
+                <img src="ec0f1da04cb921ddd1dae29fd2b53cb7c9d8a62b32032a4347e92e8bc0b232cd.png" title=" Then the added account should be available at Bank Accounts (completed)" width="1920"/>
+                <img src="ec0f1da04cb921ddd1dae29fd2b53cb7c9d8a62b32032a4347e92e8bc0b232cd.png" title=" Example: {Bank=ANZ (NZ), From=Accounting &gt; Chart of accounts, AccountType=Term Deposit} (completed)" width="1920"/>
+                <img src="9ad2ec5dffab11264476dd9c517fd5ba0ec79b9a96efedc4fadfcd0ae271ac51.png" title=" Example: {Bank=ANZ (NZ), From=Accounting &gt; Chart of accounts, AccountType=Credit Card}" width="1920"/>
+                <img src="9ad2ec5dffab11264476dd9c517fd5ba0ec79b9a96efedc4fadfcd0ae271ac51.png" title=" Given Xero Account details to login &quot;jothi2k9@gmail.com&quot; and &quot;Test1234&quot;" width="1920"/>
+                <img src="9ad2ec5dffab11264476dd9c517fd5ba0ec79b9a96efedc4fadfcd0ae271ac51.png" title=" Login: jothi2k9@gmail.com, Test1234" width="1920"/>
+                <img src="9ad2ec5dffab11264476dd9c517fd5ba0ec79b9a96efedc4fadfcd0ae271ac51.png" title=" Given Xero Account details to login &quot;jothi2k9@gmail.com&quot; and &quot;Test1234&quot; (completed)" width="1920"/>
+                <img src="9ad2ec5dffab11264476dd9c517fd5ba0ec79b9a96efedc4fadfcd0ae271ac51.png" title=" Given Xero user on Dashboard" width="1920"/>
+                <img src="9ad2ec5dffab11264476dd9c517fd5ba0ec79b9a96efedc4fadfcd0ae271ac51.png" title=" Verify login" width="1920"/>
+                <img src="9ad2ec5dffab11264476dd9c517fd5ba0ec79b9a96efedc4fadfcd0ae271ac51.png" title=" Verify login (completed)" width="1920"/>
+                <img src="9ad2ec5dffab11264476dd9c517fd5ba0ec79b9a96efedc4fadfcd0ae271ac51.png" title=" Given Xero user on Dashboard (completed)" width="1920"/>
+                <img src="9ad2ec5dffab11264476dd9c517fd5ba0ec79b9a96efedc4fadfcd0ae271ac51.png" title=" When Xero user adds &quot;ANZ (NZ)&quot; Bank Account from &quot;Accounting &gt; Chart of accounts&quot; for &quot;Credit Card&quot;" width="1920"/>
+                <img src="9ad2ec5dffab11264476dd9c517fd5ba0ec79b9a96efedc4fadfcd0ae271ac51.png" title=" Traverse from: Accounting &gt; Chart of accounts" width="1920"/>
+                <img src="01dca28569d37322da5cbee2d60daf0ce7d16801273854ba72afd98dfeb4cc56.png" title=" Traverse from: Accounting &gt; Chart of accounts (completed)" width="1920"/>
+                <img src="01dca28569d37322da5cbee2d60daf0ce7d16801273854ba72afd98dfeb4cc56.png" title=" Add account: ANZ (NZ), Credit Card" width="1920"/>
+                <img src="4ed03d6779785dcb9b75b2bcf9196c4a10ec5fd4bb7d86fb830a35c6c1b875f6.png" title=" Add account: ANZ (NZ), Credit Card (completed)" width="1920"/>
+                <img src="4ed03d6779785dcb9b75b2bcf9196c4a10ec5fd4bb7d86fb830a35c6c1b875f6.png" title=" When Xero user adds &quot;ANZ (NZ)&quot; Bank Account from &quot;Accounting &gt; Chart of accounts&quot; for &quot;Credit Card&quot; (completed)" width="1920"/>
+                <img src="4ed03d6779785dcb9b75b2bcf9196c4a10ec5fd4bb7d86fb830a35c6c1b875f6.png" title=" Then the added account should be available at Bank Accounts" width="1920"/>
+                <img src="4ed03d6779785dcb9b75b2bcf9196c4a10ec5fd4bb7d86fb830a35c6c1b875f6.png" title=" Verify added bank" width="1920"/>
+                <img src="8fa39f1d6dd64e07b06c6f5a9c5b54c8d133ac17bd62116814186e584a602ff4.png" title=" Verify added bank (completed)" width="1920"/>
+                <img src="8fa39f1d6dd64e07b06c6f5a9c5b54c8d133ac17bd62116814186e584a602ff4.png" title=" Then the added account should be available at Bank Accounts (completed)" width="1920"/>
+                <img src="8fa39f1d6dd64e07b06c6f5a9c5b54c8d133ac17bd62116814186e584a602ff4.png" title=" Example: {Bank=ANZ (NZ), From=Accounting &gt; Chart of accounts, AccountType=Credit Card} (completed)" width="1920"/>
+                <img src="756d1e1335d382732dac54c8cbfa2c551307bd17878ab37337114834d3d0a017.png" title=" Example: {Bank=ANZ (NZ), From=Accounting &gt; Chart of accounts, AccountType=Other}" width="1920"/>
+                <img src="756d1e1335d382732dac54c8cbfa2c551307bd17878ab37337114834d3d0a017.png" title=" Given Xero Account details to login &quot;jothi2k9@gmail.com&quot; and &quot;Test1234&quot;" width="1920"/>
+                <img src="756d1e1335d382732dac54c8cbfa2c551307bd17878ab37337114834d3d0a017.png" title=" Login: jothi2k9@gmail.com, Test1234" width="1920"/>
+                <img src="756d1e1335d382732dac54c8cbfa2c551307bd17878ab37337114834d3d0a017.png" title=" Given Xero Account details to login &quot;jothi2k9@gmail.com&quot; and &quot;Test1234&quot; (completed)" width="1920"/>
+                <img src="756d1e1335d382732dac54c8cbfa2c551307bd17878ab37337114834d3d0a017.png" title=" Given Xero user on Dashboard" width="1920"/>
+                <img src="756d1e1335d382732dac54c8cbfa2c551307bd17878ab37337114834d3d0a017.png" title=" Verify login" width="1920"/>
+                <img src="756d1e1335d382732dac54c8cbfa2c551307bd17878ab37337114834d3d0a017.png" title=" Verify login (completed)" width="1920"/>
+                <img src="756d1e1335d382732dac54c8cbfa2c551307bd17878ab37337114834d3d0a017.png" title=" Given Xero user on Dashboard (completed)" width="1920"/>
+                <img src="756d1e1335d382732dac54c8cbfa2c551307bd17878ab37337114834d3d0a017.png" title=" When Xero user adds &quot;ANZ (NZ)&quot; Bank Account from &quot;Accounting &gt; Chart of accounts&quot; for &quot;Other&quot;" width="1920"/>
+                <img src="756d1e1335d382732dac54c8cbfa2c551307bd17878ab37337114834d3d0a017.png" title=" Traverse from: Accounting &gt; Chart of accounts" width="1920"/>
+                <img src="a23d3c764bc07a3c6c8d9680f48543f8d29d8b25576ef2c58ef26105f44b71ab.png" title=" Traverse from: Accounting &gt; Chart of accounts (completed)" width="1920"/>
+                <img src="a23d3c764bc07a3c6c8d9680f48543f8d29d8b25576ef2c58ef26105f44b71ab.png" title=" Add account: ANZ (NZ), Other" width="1920"/>
+                <img src="94f888036e1131b3a969a0dde03b004bb97341e4d00e4f492743fc56e041149e.png" title=" Add account: ANZ (NZ), Other (completed)" width="1920"/>
+                <img src="94f888036e1131b3a969a0dde03b004bb97341e4d00e4f492743fc56e041149e.png" title=" When Xero user adds &quot;ANZ (NZ)&quot; Bank Account from &quot;Accounting &gt; Chart of accounts&quot; for &quot;Other&quot; (completed)" width="1920"/>
+                <img src="94f888036e1131b3a969a0dde03b004bb97341e4d00e4f492743fc56e041149e.png" title=" Then the added account should be available at Bank Accounts" width="1920"/>
+                <img src="94f888036e1131b3a969a0dde03b004bb97341e4d00e4f492743fc56e041149e.png" title=" Verify added bank" width="1920"/>
+                <img src="95d6264569c9aa99bc5392e411c4425a83963f3acf1209a84db6a81cfe154d32.png" title=" Verify added bank (completed)" width="1920"/>
+                <img src="95d6264569c9aa99bc5392e411c4425a83963f3acf1209a84db6a81cfe154d32.png" title=" Then the added account should be available at Bank Accounts (completed)" width="1920"/>
+                <img src="95d6264569c9aa99bc5392e411c4425a83963f3acf1209a84db6a81cfe154d32.png" title=" Example: {Bank=ANZ (NZ), From=Accounting &gt; Chart of accounts, AccountType=Other} (completed): <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.1.8</span>
+</div>
+</body>
+</html>
