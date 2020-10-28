@@ -12,8 +12,11 @@ Open a command window and run:
 
 To Run the test - 
 1. Navigate to the directory where project's pom.xml resides and run the below command
-mvn clean verify
+
+"mvn clean verify"
+
 This runs Cucumber features using Cucumber's JUnit runner. The @RunWith(CucumberWithSerenity.class) annotation on the CucumberTestSuite class tells JUnit to kick off Cucumber.
+
 2. Open Eclipse or any other IDE and run from "TestRunners.java" which is under "src\test\java\com\xero\web\testrunner\TestRunners.java"
 
 Viewing the reports
