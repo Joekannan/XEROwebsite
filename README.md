@@ -22,23 +22,3 @@ Go take a look! Note that these tests contain deliberate errors and failures to 
 
 To learn more
 You can learn more about the living documentation features of Serenity in the Serenity BDD Book.
-
-About
-No description, website, or topics provided.
-Resources
- Readme
-License
- Apache-2.0 License
-Releases
-No releases published
-Packages
-No packages published
-Languages
-Gherkin
-55.8%
- 
-Java
-44.0%
- 
-HTML
-0.2%
